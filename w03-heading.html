@@ -110,6 +110,24 @@
             color: rgb(255, 0, 0);
         }
 
+        .badge {
+            display: inline-block;
+            padding: 2px 10px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 14px;
+            margin-right: 6px;
+            color: #fff;
+            letter-spacing: 0.3px;
+        }
+
+        .badge-h1 { background-color: #e63946; }   /* แดง */
+        .badge-h2 { background-color: #e07800; }   /* ส้ม */
+        .badge-h3 { background-color: #d4a017; }   /* เหลือง */
+        .badge-h4 { background-color: #2a9d8f; }   /* เขียว */
+        .badge-h5 { background-color: #457b9d; }   /* น้ำเงิน */
+        .badge-h6 { background-color: #6a4c93; }   /* ม่วง */
+
         /* Card 2 heading sizes */
         .card-examples h1 { font-size: 2em; text-align: left; margin-bottom: 5px; }
         .card-examples h2 { font-size: 1.5em; }
@@ -118,7 +136,6 @@
         .card-examples h5 { font-size: 0.83em; }
         .card-examples h6 { font-size: 0.67em; }
 
-        /* กรอบเหลี่ยม H1–H6 */
         .card-examples h1 { border: 2px solid #e63946; background-color: #ffe0e3; padding: 5px 10px; margin-bottom: 6px; }
         .card-examples h2 { border: 2px solid #e07800; background-color: #fff3e0; padding: 5px 10px; margin-bottom: 6px; }
         .card-examples h3 { border: 2px solid #d4a017; background-color: #fffbe0; padding: 5px 10px; margin-bottom: 6px; }
@@ -148,19 +165,19 @@
             <h2>1. ความหมายของ Headings (H1–H6)</h2>
             <p>HTML มีหัวข้อทั้งหมด 6 ระดับ:</p>
             <ul>
-                <li><b>H1</b> – หัวข้อใหญ่สุด ใช้สำหรับชื่อหน้าเว็บหรือหัวข้อหลัก</li>
-                <li><b>H2</b> – หัวข้อรอง แบ่ง Section ของเนื้อหา</li>
-                <li><b>H3</b> – หัวข้อย่อยภายใน H2</li>
-                <li><b>H4</b> – ย่อยลงไปอีกระดับ</li>
-                <li><b>H5</b> – ใช้น้อย แต่เน้นลำดับข้อมูล</li>
-                <li><b>H6</b> – เล็กสุด ใช้กับหัวข้อระดับลึก</li>
+                <li><span class="badge badge-h1">H1</span> – หัวข้อใหญ่สุด ใช้สำหรับชื่อหน้าเว็บหรือหัวข้อหลัก</li>
+                <li><span class="badge badge-h2">H2</span> – หัวข้อรอง แบ่ง Section ของเนื้อหา</li>
+                <li><span class="badge badge-h3">H3</span> – หัวข้อย่อยภายใน H2</li>
+                <li><span class="badge badge-h4">H4</span> – ย่อยลงไปอีกระดับ</li>
+                <li><span class="badge badge-h5">H5</span> – ใช้น้อย แต่เน้นลำดับข้อมูล</li>
+                <li><span class="badge badge-h6">H6</span> – เล็กสุด ใช้กับหัวข้อระดับลึก</li>
             </ul>
             <div class="note">
                 <b>คำแนะนำ:</b> H1 ควรมีเพียง 1 อันในแต่ละหน้า เพื่อช่วย SEO และโครงสร้างเอกสาร
             </div>
         </section>
 
-        <!-- Card 2: ตัวอย่างการใช้ H1–H6 -->
+
         <section class="card card-examples">
             <h2>2. ตัวอย่างการใช้ H1–H6</h2>
             <pre><code>
