@@ -118,7 +118,7 @@ nav a:hover {
 }
 
 .card {
-  background: white;
+  background: rgb(143, 143, 143);
   border-radius: 18px;
   border: 1px solid #dbeafe;
   box-shadow: 0 8px 22px rgba(15, 47, 117, 0.08);
@@ -127,8 +127,8 @@ nav a:hover {
 
 .card-header {
   padding: 18px 22px;
-  border-bottom: 1px solid #dbeafe;
-  background: #f8fbff;
+  border-bottom: 1px solid #ffffff;
+  background: #661717;
   font-size: 20px;
   font-weight: bold;
   color: #005bea;
@@ -139,6 +139,18 @@ nav a:hover {
 
 .card-icon {
   font-size: 21px;
+}
+
+.card-icon-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  border-radius: 50%;
+  background: #007bff;
+  font-size: 18px;
 }
 
 .card-body {
@@ -242,6 +254,36 @@ nav a:hover {
   font-size: 15px;
   line-height: 1.9;
   white-space: pre;
+}
+
+.code-lines {
+  list-style: none;
+  counter-reset: line;
+  font-family: "Consolas", "Courier New", monospace;
+  font-size: 15px;
+}
+
+.code-lines li {
+  counter-increment: line;
+  position: relative;
+  padding-left: 40px;
+  line-height: 1.9;
+  white-space: pre;
+}
+
+.code-lines li::before {
+  content: counter(line);
+  position: absolute;
+  left: 0;
+  width: 28px;
+  text-align: right;
+  color: #6b7280;
+  user-select: none;
+}
+
+.tag {
+  color: #f87171;
+  font-weight: 700;
 }
 
 .inline-code {
