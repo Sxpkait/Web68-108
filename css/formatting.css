@@ -118,7 +118,7 @@ nav a:hover {
 }
 
 .card {
-  background: rgb(143, 143, 143);
+  background: white;
   border-radius: 18px;
   border: 1px solid #dbeafe;
   box-shadow: 0 8px 22px rgba(15, 47, 117, 0.08);
@@ -127,8 +127,8 @@ nav a:hover {
 
 .card-header {
   padding: 18px 22px;
-  border-bottom: 1px solid #ffffff;
-  background: #661717;
+  border-bottom: 1px solid #dbeafe;
+  background: #f8fbff;
   font-size: 20px;
   font-weight: bold;
   color: #005bea;
@@ -268,7 +268,7 @@ nav a:hover {
   position: relative;
   padding-left: 40px;
   line-height: 1.9;
-  white-space: pre;
+  white-space: nowrap;
 }
 
 .code-lines li::before {
