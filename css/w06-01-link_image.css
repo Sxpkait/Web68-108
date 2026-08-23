@@ -1,169 +1,396 @@
 * {
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 body {
-  font-family: "Sarabun", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: rgb(0, 0, 0);
-  color: white;
-  line-height: 1.6;
+  font-family: "Mitr";
+  background-color: #f7f7f8;
+  color: rgb(49, 46, 42);
+  line-height: 1.5;
 }
+
 .container {
+  /* border: 1px solid rgb(154, 117, 255);
+  padding: 15px;
+  margin: 15px; */
+}
+
+/* ---------------------------------------------------
+                  Header Section
+--------------------------------------------------- */
+.site-header {
   /* border: 1px solid red;
   padding: 15px;
   margin: 15px; */
-}
-/*================
-      Header
-==================*/
-
-.site-header {
-  /* border: 1px solid rgb(0, 255, 64);
-  padding: 15px;
-  margin: 15px;*/
-  background: linear-gradient(90deg, red, blue);
+  background: #ffffff;
+  border-bottom: 1px solid #e5e5e8;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+
+  padding: 8px 20px;
 }
+/* ------Brand Logo------ */
 .brand {
-  /* border: 1px solid rgb(8, 255, 193);
-  padding: 15px;
-  margin: 15px; */
+  /* border: 1px solid rgb(0, 102, 255); */
+  padding: 1px;
+  margin: 15px;
+
   display: flex;
   align-items: center;
-  gap: 15px;
-  color: white;
+  gap: 20px;
+
+  color: #2b2b2b;
 }
-.brand-text h2 {
-  font-size: 14px;
-}
-.brand-text p {
-  font-size: 14px;
-  opacity: 1.85;
-}
-.brand-icon {
-  background-color: wheat;
-  width: 60px;
-  height: 60px;
+.brand-logo {
+  background-color: #f2f2f4;
+  border: 1px solid #e5e5e8;
+  border-radius: 10px;
+
+  font-size: 30px;
+
+  height: 55px;
+  width: 55px;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 8px;
-  border-radius: 50%;
-  border: 5px solid white;
-  font-size: 35px;
 }
+.brand-text h2 {
+  font-size: 20px;
+}
+.brand-text p {
+  font-size: 14px;
+  opacity: 0.5;
+  /* สีจางลง */
+}
+
+/* ------nav ber------- */
 .main-nav {
-  /* border: 1px solid rgb(8, 255, 193);
+  /* border: 1px solid rgb(0, 102, 255);
   padding: 15px;
   margin: 15px; */
 }
 .nav-list {
-  list-style-type: none;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-.nav-list a {
-  color: white;
-  text-decoration: none;
-  padding: 12px 16px;
-  border-radius: 8px;
-  transition: all 0.5s;
-}
-.nav-list a:hover {
-  background-color: rgba(255, 255, 255, 0.411);
-}
-/*================
-      Main-Layout
-==================*/
+  list-style: none;
 
-.main-layout {
-  /* border: 1px solid rgb(0, 81, 255);
-  padding: 15px;
-  margin: 15px; */
-  display: grid;
-  grid-template-columns: 1fr 390px;
-  padding: 20px 22px 0px;
-}
-/*=================================
-  Left content
-===================================*/
-.left-content {
-  /* border: 1px solid rgb(252, 0, 117);
-  padding: 15px;
-  margin: 15px; */
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
 }
+.nav-list li a {
+  color: #3d3d3d;
+  text-decoration: none;
 
-/*=================================
-  right content
-===================================*/
-.right-sidebar {
-  border: 1px solid rgb(252, 0, 117);
-  padding: 15px;
-  margin: 15px;
+  padding: 10px 15px;
+  border-radius: 8px;
+
+  transition: 0.3s;
 }
-/* hero*/
-.hero {
-  /* border: 1px solid rgb(145, 101, 121);
+.nav-list li a:hover {
+  background-color: #f2f2f4;
+  color: #111111;
+}
+
+/* ---------------------------------------------------
+                  Main Section
+--------------------------------------------------- */
+.main-layout {
+  /* border: 1px solid red;
   padding: 15px;
   margin: 15px; */
+
+  display: grid;
+  grid-template-columns: 1fr 390px;
+  padding: 20px 22px;
+}
+/* left content */
+.left-content {
+  /* border: 1px solid rgb(72, 255, 0);
+  padding: 15px;
+  margin: 15px; */
+}
+.hero {
+  /* border: 1px solid rgb(72, 255, 0);
+  margin: 15px;*/
+
   display: grid;
   grid-template-columns: 1.5fr 0.8fr;
-  background: linear-gradient(
-    100deg,
-    rgba(255, 255, 255, 0.39),
-    rgba(0, 0, 255, 0.452)
-  );
+
+  background: #ffffff;
+  border: 1px solid #e5e5e8;
+
+  border-radius: 24px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 26px 36px;
+
   align-items: center;
-  justify-content: center;
-  border-radius: 12px;
-  padding: 24px 36px;
-  box-shadow: 0 4px 12px white;
-  min-height: 185px;
 }
-
 .hero-text h1 {
-  font-size: 36px;
-  color: white;
+  font-size: 30px;
+  color: #2b2b2b;
+  line-height: 1.5;
 }
-
 .hero-text p {
   font-size: 21px;
-  color: rgba(255, 255, 255, 0.63);
-  font-weight: 400;
+  color: #6b6b6b;
+  font-weight: 500;
 }
 
 .hero-photo img {
-  width: 200px;
+  width: 400px;
   height: 200px;
-  border: 3px solid blue;
-  border-radius: 12px;
-  /* object-fit: contain;
-  object-fit: fill; */
+
+  border: 1px solid #e5e5e8;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+
   object-fit: cover;
+  /*
+    object-fit: contain ➡️เห็นภาพครบ รักษาสัดส่วน (อาจมีขอบว่าง)
+    object-fit: fill ➡️ยืดภาพให้เต็มกล่อง ภาพอาจบิด (สัดส่วนเพี้ยน)
+    object-fit: cover ➡️ครอปภาพให้เต็มกล่อง รักษาสัดส่วน บางส่วนของภาพจะถูกตัดออก
+  */
 }
-/* linl examle */
+
 .card {
-  border: 1px solid rgb(181, 0, 252);
+  border: 1px solid #e5e5e8;
+  border-radius: 15px;
+  background-color: white;
+
+  margin-top: 20px;
+
+  border-radius: 24px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 26px 36px;
+}
+
+/*Link Example*/
+/*card1 link*/
+.card-header-title {
+}
+.card-header-title h2 {
+  color: #2b2b2b;
+}
+.card-body-grid {
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  gap: 15px;
+}
+/*กล่องซ้าย*/
+.result-panel,.code-panel {
+  border: 1px solid #e5e5e8;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+/*เนื้อหากล่องซ้าย*/
+.panel-header,.code-panel-header {
+  background-color: #f7f7f8;
+  color: #2b2b2b;
+  font-weight: bold;
+  padding: 0px 20px;
+  border-bottom: 1px solid #e5e5e8;
+}
+.panel-body ,.code-panel-body{
+  padding: 5px 20px 10px 20px;
+  line-height: 2;
+}
+.panel-body a {
+  display: block;
+  color: #2b2b2b;
+}
+.panel-body a:hover {
+  color: #b0439b;
+}
+.back-btn {
+  display: inline-block !important;
+
+  border: 1px solid #d5d5d8;
+  border-radius: 5px;
+  padding: 0px 15px;
+  text-decoration: none;
+}
+.mail-btn {
+  background-color: #f2f2f4;
+  border-radius: 5px;
+  weight: 24px;
+  height: 24px;
+}
+/*card2 image*/
+.body-grid{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+
+  padding: 10px 0;
+  font-size: 14px;
+
+  text-align: center;
+  align-items: baseline;
+}
+
+
+/*กล่องขวา*/
+.code-panel {
+  background-color: #2b2b2f;
+  font-size: 14px;
+  border-color: #2b2b2f;
+}
+.code-panel .code-panel-header{
+  background-color: #202023;
+  color: #f2f2f2;
+  border-bottom: 1px solid #3a3a3d;
+}
+.code-list{
+  padding: 10px 40px;
+}
+.code-list li{
+  padding: 0 20px;
+}
+.code-panel-body{
+  color: #ffffff;
+}
+.tag{
+  color: #ff6b81;
+}
+.attr{
+  color: #ffd166;
+}
+.value{
+  color: #6ee7a8;
+}
+
+/* # หมายถึง id  / . หมายถึง class*/
+
+/*-----------------------------------------*/
+/* right sidebar */
+.right-sidebar {
+  /*border: 1px solid rgb(72, 255, 0);*/
   padding: 15px;
   margin: 15px;
 }
-/* image exmle*/
-.card {
+.side-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e5e8;
+  border-radius: 15px;
+
+  padding: 10px 15px;
+  margin-top: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
-/*================
-      Tip-box
-==================*/
+
+.sidecard-header{
+  color: #2b2b2b;
+}
+.sidecard-body{
+  display: grid;
+  grid-template-columns: 10% 90%;
+  gap: 10px;
+
+  font-size: 16px;
+  align-items: center;
+  padding: 6px;
+}
+.sidecard-body pink-btn{
+  font-size: 22px;
+}
+.pink-btn{
+  background-color: #b0439b;
+  border-radius: 50%; 
+  color: white;
+
+  align-items: center;
+  text-align: center;
+
+  width: 28px;
+  height: 28px;
+}
+.btn{
+  border-radius: 50%; 
+  color: white;
+
+  align-items: center;
+  text-align: center;
+
+  width: 28px;
+  height: 28px;
+}
+.pink{
+  background-color: #d98cc7;
+}
+.blue{
+  background-color: #7b93d6;
+}
+.green{
+  background-color: #6fb98f;
+}
+.orange{
+  background-color: #d69a6b;
+}
+.purple{
+  background-color: #a97cc0;
+}
+.mint{
+  background-color: #7fd6bb;
+}
+.sidebody-box{
+  display: grid;
+  grid-template-columns: repeat(4 ,1fr);
+  gap: 10px;
+
+  align-items: center;
+  text-align: center;
+}
+.body-box{
+  padding: 10px;
+  border-radius: 15px;
+  border: 1px solid #eeeeee;
+}
+.blue-box{
+  background-color: #f4f5fb;
+  color: #445a9c;
+}
+.sky-box{
+  background-color: #f2f8fc;
+  color: #3b6f95;
+}
+.green-box{
+  background-color: #f2f9f4;
+  color: #3f8a55;
+}
+.orange-box{
+  background-color: #fbf4ec;
+  color: #b06a2c;
+}
+.purple-box{
+  background-color: #f7f1fb;
+  color: #7a4a90;
+}
+.pink-box{
+  background-color: #fbf1f8;
+  color: #a5457f;
+}
+.mint-box{
+  background-color: #f0faf6;
+  color: #2f8a68;
+}
+.yellow-box{
+  background-color: #fbf9ec;
+  color: #a08d1d;
+}
+.submit-card {
+}
+/* ---------------------------------------------------
+                  Footer Section
+--------------------------------------------------- */
 
 .tip-box {
-  border: 1px solid rgb(229, 255, 0);
+  border-top: 1px solid #e5e5e8;
   padding: 15px;
   margin: 15px;
+  color: #8a8a8a;
+  text-align: center;
 }
