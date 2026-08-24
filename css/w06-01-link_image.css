@@ -5,7 +5,7 @@
 }
 body {
   font-family: "Mitr";
-  background-color: #f7f7f8;
+  background-color: #a7a7a7;
   color: rgb(49, 46, 42);
   line-height: 1.5;
 }
@@ -104,6 +104,7 @@ body {
 
   display: grid;
   grid-template-columns: 1fr 390px;
+  gap: 15px;
   padding: 20px 22px;
 }
 /* left content */
@@ -180,21 +181,24 @@ body {
   gap: 15px;
 }
 /*กล่องซ้าย*/
-.result-panel,.code-panel {
+.result-panel,
+.code-panel {
   border: 1px solid #e5e5e8;
   border-radius: 15px;
   overflow: hidden;
 }
 
 /*เนื้อหากล่องซ้าย*/
-.panel-header,.code-panel-header {
+.panel-header,
+.code-panel-header {
   background-color: #f7f7f8;
   color: #2b2b2b;
   font-weight: bold;
   padding: 0px 20px;
   border-bottom: 1px solid #e5e5e8;
 }
-.panel-body ,.code-panel-body{
+.panel-body,
+.code-panel-body {
   padding: 5px 20px 10px 20px;
   line-height: 2;
 }
@@ -220,9 +224,9 @@ body {
   height: 24px;
 }
 /*card2 image*/
-.body-grid{
+.body-grid {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
 
   padding: 10px 0;
@@ -232,34 +236,33 @@ body {
   align-items: baseline;
 }
 
-
 /*กล่องขวา*/
 .code-panel {
   background-color: #2b2b2f;
   font-size: 14px;
   border-color: #2b2b2f;
 }
-.code-panel .code-panel-header{
+.code-panel .code-panel-header {
   background-color: #202023;
   color: #f2f2f2;
   border-bottom: 1px solid #3a3a3d;
 }
-.code-list{
+.code-list {
   padding: 10px 40px;
 }
-.code-list li{
+.code-list li {
   padding: 0 20px;
 }
-.code-panel-body{
+.code-panel-body {
   color: #ffffff;
 }
-.tag{
+.tag {
   color: #ff6b81;
 }
-.attr{
+.attr {
   color: #ffd166;
 }
-.value{
+.value {
   color: #6ee7a8;
 }
 
@@ -282,10 +285,10 @@ body {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
-.sidecard-header{
+.sidecard-header {
   color: #2b2b2b;
 }
-.sidecard-body{
+.sidecard-body {
   display: grid;
   grid-template-columns: 10% 90%;
   gap: 10px;
@@ -294,12 +297,12 @@ body {
   align-items: center;
   padding: 6px;
 }
-.sidecard-body pink-btn{
+.sidecard-body pink-btn {
   font-size: 22px;
 }
-.pink-btn{
+.pink-btn {
   background-color: #b0439b;
-  border-radius: 50%; 
+  border-radius: 50%;
   color: white;
 
   align-items: center;
@@ -308,8 +311,8 @@ body {
   width: 28px;
   height: 28px;
 }
-.btn{
-  border-radius: 50%; 
+.btn {
+  border-radius: 50%;
   color: white;
 
   align-items: center;
@@ -318,66 +321,66 @@ body {
   width: 28px;
   height: 28px;
 }
-.pink{
+.pink {
   background-color: #d98cc7;
 }
-.blue{
+.blue {
   background-color: #7b93d6;
 }
-.green{
+.green {
   background-color: #6fb98f;
 }
-.orange{
+.orange {
   background-color: #d69a6b;
 }
-.purple{
+.purple {
   background-color: #a97cc0;
 }
-.mint{
+.mint {
   background-color: #7fd6bb;
 }
-.sidebody-box{
+.sidebody-box {
   display: grid;
-  grid-template-columns: repeat(4 ,1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 10px;
 
   align-items: center;
   text-align: center;
 }
-.body-box{
+.body-box {
   padding: 10px;
   border-radius: 15px;
-  border: 1px solid #eeeeee;
+  border: 1px solid #090909;
 }
-.blue-box{
+.blue-box {
   background-color: #f4f5fb;
   color: #445a9c;
 }
-.sky-box{
+.sky-box {
   background-color: #f2f8fc;
   color: #3b6f95;
 }
-.green-box{
+.green-box {
   background-color: #f2f9f4;
   color: #3f8a55;
 }
-.orange-box{
+.orange-box {
   background-color: #fbf4ec;
   color: #b06a2c;
 }
-.purple-box{
+.purple-box {
   background-color: #f7f1fb;
   color: #7a4a90;
 }
-.pink-box{
+.pink-box {
   background-color: #fbf1f8;
   color: #a5457f;
 }
-.mint-box{
+.mint-box {
   background-color: #f0faf6;
   color: #2f8a68;
 }
-.yellow-box{
+.yellow-box {
   background-color: #fbf9ec;
   color: #a08d1d;
 }
@@ -386,11 +389,107 @@ body {
 /* ---------------------------------------------------
                   Footer Section
 --------------------------------------------------- */
+/*===== Submit =====*/
+.submit-card {
+  background-color: rgb(242, 247, 94);
+  border-color: yellow;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.submit-card .icon-plane {
+  font-size: 40px;
+  flex-shrink: 0;
+}
+.submit-card .submit-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.submit-card .submit-text h3 {
+  font-size: 16px;
+  color: #2b2b2b;
+}
+.submit-card .submit-text p {
+  font-size: 14px;
+  color: #3d3d3d;
+}
 
+/*===== Tip box =====*/
 .tip-box {
-  border-top: 1px solid #e5e5e8;
-  padding: 15px;
+  border-top: 1px solid #000000;
+  padding: 20px 15px;
   margin: 15px;
   color: #8a8a8a;
-  text-align: center;
+
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+.tip-icon-circle {
+  flex-shrink: 0;
+
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #2b2b2b;
+  color: #ffffff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 18px;
+  font-weight: bold;
+  font-style: italic;
+}
+.tip-content {
+  flex: 1;
+}
+.tip-content h2 {
+  font-size: 18px;
+  margin-bottom: 6px;
+  color: #2b2b2b;
+}
+.tip-content p {
+  font-size: 15px;
+  color: black;
+  line-height: 1.8;
+}
+.tip-content span {
+  color: #000;
+  font-family: Consolas, monospace;
+  font-weight: bold;
+}
+.tip-side-icons {
+  flex-shrink: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 28px;
+}
+
+/*===========================
+          Responsive
+  ===========================*/
+@media (max-width: 768px) {
+  .right-sidebar {
+    grid-template-columns: repeat(1fr);
+  }
+  .tip-side-icons {
+    display: none;
+  }
+  .site-header {
+    background: linear-gradient(red);
+  }
+  .tip-content {
+    grid-template-columns: 90px 1fr;
+  }
+  .nav-list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
