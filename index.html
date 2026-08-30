@@ -3,49 +3,316 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="descripttion" content="เว็บสำหรับแนะนำการใช้งาน htm css และ workshop"> 
+    <meta name="description" content="เว็บสำหรับแนะนำการใช้งาน html css และ workshop">
     <title>Web Work Shop : 684259s035</title>
     <style>
-        html{
+        :root {
+            --black: #111111;
+            --dark-gray: #333333;
+            --mid-gray: #777777;
+            --light-gray: #e5e5e5;
+            --lighter-gray: #f4f4f4;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
             scroll-behavior: smooth;
         }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
-            margin: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
             padding: 0;
-            color: #333;
-            background-color: rgb(202, 202, 202);
-            line-height: 2;
+            color: var(--dark-gray);
+            background-color: var(--white);
+            line-height: 1.8;
+        }
+
+        /* ===== Header ===== */
+        header {
+            background-color: var(--black);
+            color: var(--white);
+            padding: 18px 5%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 3px solid var(--black);
+        }
+
+        header p {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            font-size: 15px;
+            letter-spacing: 0.5px;
+        }
+
+        header nav a {
+            color: var(--white);
+            font-weight: 600;
+            padding: 6px 16px;
+            border: 1px solid var(--white);
+            border-radius: 30px;
+            transition: all 0.25s ease;
+        }
+
+        header nav a:hover {
+            background-color: var(--white);
+            color: var(--black);
+            text-decoration: none;
+        }
+
+        /* ===== Layout container ===== */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 5% 60px;
         }
 
         h1 {
-            color: #cc0000;
+            color: var(--black);
+            text-align: center;
+            font-size: 2.4em;
+            letter-spacing: 1px;
+            margin: 50px 0 10px;
+            text-transform: uppercase;
+            border-bottom: 4px solid var(--black);
+            display: inline-block;
+            padding-bottom: 12px;
+        }
+
+        .title-wrap {
+            text-align: center;
+        }
+
+        .intro-text {
+            text-align: center;
+            color: var(--mid-gray);
+            max-width: 600px;
+            margin: 20px auto 40px;
+            font-size: 1.05em;
         }
 
         h2 {
-            color: #cc0000;
+            color: var(--black);
+            font-size: 1.5em;
+            margin-top: 0;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--light-gray);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2::before {
+            content: "";
+            width: 10px;
+            height: 10px;
+            background-color: var(--black);
+            border-radius: 50%;
+            display: inline-block;
+            flex-shrink: 0;
+        }
+
+        /* ===== Topics nav grid ===== */
+        .topics-box {
+            background-color: var(--lighter-gray);
+            border: 1px solid var(--light-gray);
+            border-radius: 10px;
+            padding: 30px 35px;
+            margin: 30px 0 50px;
+        }
+
+        .topics-box h2 {
+            border: none;
+            margin-bottom: 15px;
+        }
+
+        .topics-box p {
+            margin-top: 0;
+            color: var(--mid-gray);
+        }
+
+        .topic-grid {
+            list-style: none;
+            margin: 20px 0 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px;
+        }
+
+        .topic-grid li {
+            border: 1px solid var(--light-gray);
+            background-color: var(--white);
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .topic-grid li:hover {
+            border-color: var(--black);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .topic-grid a {
+            display: block;
+            padding: 12px 16px;
+            color: var(--dark-gray);
+            font-weight: 500;
+        }
+
+        .topic-grid a:hover {
+            color: var(--black);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        /* ===== Section styling ===== */
+        section {
+            padding: 45px 0;
+        }
+
+        section p {
+            color: var(--dark-gray);
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid var(--light-gray);
+            margin: 0;
         }
 
         pre {
-            background-color: rgb(129, 255, 236);
-            border-left: #0b85fe 5px solid;
-            font-size: 16px;
-            padding-top: 10px;
+            background-color: var(--black);
+            color: var(--lighter-gray);
+            border-left: 5px solid var(--black);
+            font-size: 15px;
+            padding: 20px 22px;
             white-space: pre-wrap;
-            border-radius: 7px;
+            border-radius: 8px;
+            font-family: 'Consolas', 'Courier New', monospace;
+            overflow-x: auto;
         }
 
         a {
             text-decoration: none;
+            color: var(--black);
+            font-weight: 600;
+            border-bottom: 1px solid transparent;
         }
 
         a:hover {
-            text-decoration: underline;
-            color: green;
+            text-decoration: none;
+            color: var(--black);
+            border-bottom: 1px solid var(--black);
+        }
+
+        pre a {
+            color: var(--lighter-gray);
+        }
+
+        .workshop-links {
+            margin: 12px 0;
+        }
+
+        .workshop-links a {
+            display: inline-block;
+            background-color: var(--black);
+            color: var(--white);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin-right: 8px;
+            margin-bottom: 6px;
+        }
+
+        .workshop-links a:hover {
+            background-color: var(--dark-gray);
+            border-bottom: none;
+        }
+
+        .top-link {
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 0.85em;
+            color: var(--mid-gray);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .top-link:hover {
+            color: var(--black);
         }
 
         .text-center {
-            text-align:center;
+            text-align: center;
+        }
+
+        /* ===== My Workshop section ===== */
+        #workshop ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 14px;
+            margin-bottom: 20px;
+        }
+
+        #workshop ul li {
+            border: 2px solid var(--black);
+            border-radius: 8px;
+        }
+
+        #workshop ul li a {
+            display: block;
+            padding: 16px;
+            text-align: center;
+            color: var(--black);
+        }
+
+        #workshop ul li:hover {
+            background-color: var(--black);
+        }
+
+        #workshop ul li:hover a {
+            color: var(--white);
+            border-bottom: none;
+        }
+
+        /* ===== Footer ===== */
+        footer {
+            background-color: var(--black);
+            color: var(--light-gray);
+            padding: 30px 5%;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+            color: var(--mid-gray);
+        }
+
+        .text-center a {
+            color: var(--black);
+            font-weight: 700;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            .topics-box {
+                padding: 20px;
+            }
         }
     </style>
 </head>
@@ -53,29 +320,36 @@
  <header>
     <p>เรียนรู้เว็บเบื้องต้น
         <nav>
-            <a href="inex.html">Home</a>
+            <a href="index.html">Home</a>
         </nav>
     </p>
  </header>
-<h1 id="top">HTML Tutorial</h1>
-<p>Welcome to the HTML tutorial. Click on the topics below to start learning:</p>
 
-<h2>Topics</h2>
-<ul>
-    <li><a href="#git init">Introduction to HTML</a></li>
-    <li><a href="#document-structure">HTML Document Structure</a></li>
-    <li><a href="#heading">Heading</a></li>
-    <li><a href="#paragraph">Paragraph</a></li>
-    <li><a href="#text-formatting">Text Formatting</a></li>
-    <li><a href="#creating-links">Creating Links</a></li>
-    <li><a href="#lists">Lists (Ordered and Unordered)</a></li>
-    <li><a href="#adding-images">Adding Images</a></li>
-    <li><a href="#creating-tables">Creating Tables</a></li>
-    <li><a href="#html-forms">HTML Forms</a></li>
-    <li><a href="#multimedia">Embedding Multimedia (Audio &amp; Video)</a></li>
-    <li><a href="#semantic">Semantic HTML</a></li>
-    <li><a href="#workshop">Workshop</a></li>
-</ul>
+ <div class="container">
+
+<div class="title-wrap">
+    <h1 id="top">HTML Tutorial</h1>
+</div>
+<p class="intro-text">Welcome to the HTML tutorial. Click on the topics below to start learning:</p>
+
+<div class="topics-box">
+    <h2>Topics</h2>
+    <ul class="topic-grid">
+        <li><a href="#introduction">Introduction to HTML</a></li>
+        <li><a href="#document-structure">HTML Document Structure</a></li>
+        <li><a href="#heading">Heading</a></li>
+        <li><a href="#paragraph">Paragraph</a></li>
+        <li><a href="#text-formatting">Text Formatting</a></li>
+        <li><a href="#creating-links">Creating Links</a></li>
+        <li><a href="#lists">Lists (Ordered and Unordered)</a></li>
+        <li><a href="#adding-images">Adding Images</a></li>
+        <li><a href="#creating-tables">Creating Tables</a></li>
+        <li><a href="#html-forms">HTML Forms</a></li>
+        <li><a href="#multimedia">Embedding Multimedia (Audio &amp; Video)</a></li>
+        <li><a href="#semantic">Semantic HTML</a></li>
+        <li><a href="#workshop">Workshop</a></li>
+    </ul>
+</div>
 
 <hr>
 
@@ -94,7 +368,7 @@
     - HTML can embed programs written in a scripting language such as JavaScript, which affects the behavior and content of web pages
     - HTML is not a programming language, but a markup language
     </pre>
-    <a href="#top">TOP</a>
+    <a class="top-link" href="#top">↑ TOP</a>
 </section>
 
 <hr>
@@ -119,7 +393,7 @@
         ตัวอย่าง: &lt;h1&gt;Hello, World!&lt;/h1&gt;
                   &lt;img src="image.jpg" alt="A description of the image"&gt;
     </pre>
-    <a href="#top">TOP</a>
+    <a class="top-link" href="#top">↑ TOP</a>
 </section>
 
 <hr>
@@ -128,8 +402,10 @@
 <section>
     <h2 id="heading">Heading</h2>
     <p>HTML headings are defined with the &lt;h1&gt; to &lt;h6&gt; tags...</p>
-    <a href="W03-heading.html">workshop 01</a>
-    <a href="W03-heading51.html">| workshop 02</a>
+    <div class="workshop-links">
+        <a href="W03-heading.html">Workshop 01</a>
+        <a href="W03-heading51.html">Workshop 02</a>
+    </div>
     <pre>
     - &lt;h1&gt;: Heading 1
     - &lt;h2&gt;: Heading 2
@@ -138,7 +414,7 @@
     - &lt;h5&gt;: Heading 5
     - &lt;h6&gt;: Heading 6
     </pre>
-    <a href="#top">TOP</a>
+    <a class="top-link" href="#top">↑ TOP</a>
 </section>
 
 <hr>
@@ -151,7 +427,7 @@
     <pre>
      - &lt;p&gt;: Paragraph
     </pre>
-    <a href="#top">TOP</a>
+    <a class="top-link" href="#top">↑ TOP</a>
 </section>
 
 <hr>
@@ -159,7 +435,9 @@
 <!-- Text Formatting -->
 <section>
     <h2 id="text-formatting">Text Formatting</h2>
-    <p><a href="w04-01-formatting.html">workshop</a></p>
+    <div class="workshop-links">
+        <a href="w04-01-formatting.html">Workshop</a>
+    </div>
     <p>HTML provides various elements to format text...</p>
     <pre>
     - &lt;h1&gt; to &lt;h6&gt;: Headings
@@ -184,7 +462,7 @@
     - &lt;q&gt;: Inline quotation
     - &lt;code&gt;: Code snippet
     </pre>
-    <a href="#top">TOP</a>
+    <a class="top-link" href="#top">↑ TOP</a>
 </section>
 
 <hr>
@@ -215,7 +493,7 @@
             - Use the download attribute to create a download link
             - Example: &lt;a href="file.txt" download&gt;Download Text File&lt;/a&gt;
     </pre>
-    <a href="#top">TOP</a>
+    <a class="top-link" href="#top">↑ TOP</a>
 </section>
 
 <hr>
@@ -266,7 +544,7 @@
         - Example: &lt;ol style="list-style-type: upper-roman;"&gt;
         - Example: &lt;ol style="list-style-type: lower-roman;"&gt;
     </pre>
-    <a href="#top">TOP</a>
+    <a class="top-link" href="#top">↑ TOP</a>
 </section>
 
 <hr>
@@ -316,7 +594,7 @@
                     object-fit: cover;
                 }
     </pre>
-    <a href="#top">TOP</a>
+    <a class="top-link" href="#top">↑ TOP</a>
 </section>
 
 <hr>
@@ -324,7 +602,10 @@
 <!-- Creating Tables -->
 <section>
     <h2 id="creating-tables">Creating Tables</h2>
-    <p><a href="#">Workshop 1</a> <a href="#">Workshop 2</a></p>
+    <div class="workshop-links">
+        <a href="#">Workshop 1</a>
+        <a href="#">Workshop 2</a>
+    </div>
     <p>HTML tables are defined with the &lt;table&gt;, &lt;tr&gt;, &lt;th&gt;, and &lt;td&gt; tags...</p>
     <pre>
         - &lt;table&gt;: Table
@@ -332,7 +613,7 @@
         - &lt;th&gt;: Table header
         - &lt;td&gt;: Table data/cell
     </pre>
-    <a href="#top">TOP</a>
+    <a class="top-link" href="#top">↑ TOP</a>
 </section>
 
 <hr>
@@ -340,7 +621,10 @@
 <!-- HTML Forms -->
 <section>
     <h2 id="html-forms">HTML Forms</h2>
-    <p><a href="#">Workshop 1</a> <a href="#">Workshop 2</a></p>
+    <div class="workshop-links">
+        <a href="#">Workshop 1</a>
+        <a href="#">Workshop 2</a>
+    </div>
     <p>HTML forms are defined with the &lt;form&gt; tag...</p>
     <pre>
         หัวข้อเกี่ยวกับฟอร์ม
@@ -381,7 +665,7 @@
             - การส่งข้อมูลไปยังเซิร์ฟเวอร์
             - การใช้ JavaScript (เช่น onsubmit)
     </pre>
-    <a href="#top">TOP</a>
+    <a class="top-link" href="#top">↑ TOP</a>
 </section>
 
 <hr>
@@ -401,7 +685,7 @@
                 &lt;source src="movie.mp4" type="video/mp4"&gt;
             &lt;/video&gt;
     </pre>
-    <a href="#top">TOP</a>
+    <a class="top-link" href="#top">↑ TOP</a>
 </section>
 
 <hr>
@@ -418,27 +702,29 @@
         - &lt;aside&gt;: Defines content aside from the page content
         - &lt;footer&gt;: Defines a footer for a document or section
     </pre>
-    <a href="#top">TOP</a>
+    <a class="top-link" href="#top">↑ TOP</a>
 </section>
 
 <hr>
 
 <!-- My Workshop -->
-<section>
-    <h2 id="workshop">My Workshop</h2>
+<section id="workshop">
+    <h2>My Workshop</h2>
     <ul>
-        <li><a href="#">workshop 01 : rabbit</a></li>
-        <li><a href="#">workshop 02 : Login</a></li>
+        <li><a href="#">Workshop 01 : Rabbit</a></li>
+        <li><a href="#">Workshop 02 : Login</a></li>
     </ul>
-    <a href="#top">TOP</a>
-    <hr>
-<div class="text-center">
-        <a href="https://www.w3schools.com/">Learn more about HTML</a>
-        <footer>
-            <p>&copy; 2026 HTML Tutorial by Supakit Ken</p>
-        </footer>
-    </div>
-
+    <a class="top-link" href="#top">↑ TOP</a>
 </section>
+
+</div>
+
+<footer>
+    <div class="text-center">
+        <p><a href="https://www.w3schools.com/">Learn more about HTML</a></p>
+        <p>&copy; 2026 HTML Tutorial by Supakit Ken</p>
+    </div>
+</footer>
+
 </body>
 </html>
