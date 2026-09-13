@@ -4,24 +4,33 @@
   padding: 0px;
 }
 :root {
-  /* สีหลักเว็บ */
-  --primary-color: rgb(209, 0, 246);
-  --primary-dark-color: white;
-  --secondary-color: blue;
+  /* สีหลักเว็บ (ธีมขาวดำ) */
+  --primary-color: #111111;
+  --primary-dark-color: #000000;
+  --secondary-color: #000000;
   /* สีข้อความ */
-  --mute-text-color: gray;
+  --mute-text-color: #666666;
   /* สีพื้นหลัง */
-  --header-bg-color: rgba(255, 255, 255, 0.805);
-  --nav-bg-color: rgb(255, 251, 251);
-  --nav-link-bg-color: #d2d2d2;
-  --nav-link-hover-bg-color: rgb(146, 168, 244);
-  --nav-link-hover-text-color: rgb(0, 0, 0);
-  --light-text-color: rgb(239, 234, 234);
-  --footer-bg-color: black;
+  --header-bg-color: rgba(255, 255, 255, 0.85);
+  --nav-bg-color: #ffffff;
+  --nav-link-bg-color: #e0e0e0;
+  --nav-link-hover-bg-color: #111111;
+  --nav-link-hover-text-color: #ffffff;
+  --light-text-color: #f2f2f2;
+  --footer-bg-color: #000000;
   /* สีเงา */
-  --header-shadow: 0 5px 10px rgb(100, 99, 99);
+  --header-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
   --nav-link-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
   --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  /* สีการ์ดคำแนะนำ (ไล่เฉดเทา) */
+  --info-blue-bg: #f7f7f7;
+  --info-blue-title: #111111;
+  --info-purple-bg: #ececec;
+  --info-purple-title: #111111;
+  --info-green-bg: #dedede;
+  --info-green-title: #111111;
+  --info-orange-bg: #cfcfcf;
+  --info-orange-title: #111111;
 }
 html {
   scroll-behavior: smooth;
@@ -30,7 +39,8 @@ html {
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  background: linear-gradient(white, red, blue);
+  background: linear-gradient(180deg, #ffffff, #e6e6e6);
+  color: var(--primary-color);
 }
 
 .container {
@@ -131,6 +141,74 @@ nav a:hover {
 .breed {
   color: var(--mute-text-color);
 }
+/* =============================
+        Info Section (คำแนะนำ)
+   ============================= */
+.info-section {
+  background-color: var(--nav-bg-color);
+  box-shadow: var(--card-shadow);
+  border-radius: 16px;
+  padding: 1.5rem 2rem 2rem;
+  margin: 2rem 1rem 3rem;
+}
+.info-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+.info-card {
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: var(--card-shadow);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.info-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+.info-card p {
+  color: var(--mute-text-color);
+  font-size: 0.9rem;
+}
+.info-blue {
+  background-color: var(--info-blue-bg);
+}
+.info-blue h3 {
+  color: var(--info-blue-title);
+}
+.info-purple {
+  background-color: var(--info-purple-bg);
+}
+.info-purple h3 {
+  color: var(--info-purple-title);
+}
+.info-green {
+  background-color: var(--info-green-bg);
+}
+.info-green h3 {
+  color: var(--info-green-title);
+}
+.info-orange {
+  background-color: var(--info-orange-bg);
+}
+.info-orange h3 {
+  color: var(--info-orange-title);
+}
+@media (max-width: 800px) {
+  .info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* =============================
             Footer
    ============================= */
