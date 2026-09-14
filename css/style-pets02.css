@@ -1,0 +1,328 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+:root {
+  /* สีหลักเว็บ (ธีมขาวดำ) */
+  --primary-color: #111111;
+  --primary-dark-color: #000000;
+  --secondary-color: #000000;
+  /* สีข้อความ */
+  --mute-text-color: #666666;
+  /* สีพื้นหลัง */
+  --header-bg-color: rgba(255, 255, 255, 0.85);
+  --nav-bg-color: #ffffff;
+  --nav-link-bg-color: #e0e0e0;
+  --nav-link-hover-bg-color: #111111;
+  --nav-link-hover-text-color: #ffffff;
+  --light-text-color: #f2f2f2;
+  --footer-bg-color: #000000;
+  --btn-bg-color: #111;
+  --dark-text-color: black; /* สีเงา */
+  --header-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+  --nav-link-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  --border-color: #111111;
+  /* สีการ์ดคำแนะนำ (ไล่เฉดเทา) */
+  --info-blue-bg: #f7f7f7;
+  --info-blue-title: #111111;
+  --info-purple-bg: #ececec;
+  --info-purple-title: #111111;
+  --info-green-bg: #dedede;
+  --info-green-title: #111111;
+  --info-orange-bg: #cfcfcf;
+  --info-orange-title: #111111;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(180deg, #ffffff, #e6e6e6);
+  color: var(--primary-color);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* =============================
+            header
+   ============================= */
+.header {
+  background-color: var(--header-bg-color);
+  box-shadow: var(--header-shadow);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+}
+.header-container {
+  text-align: center;
+  padding-block: 2rem;
+}
+.header-title {
+  color: var(--primary-color);
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+.header-subtitle {
+  color: var(--mute-text-color);
+}
+
+/* =============================
+            Navbar
+   ============================= */
+.catagory-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 1rem;
+}
+.fillter-radio {
+}
+.catagory-nav label {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  border-radius: 999px;
+  box-shadow: var(--nav-link-shadow);
+  background-color: var(--nav-link-bg-color);
+  transition: all 0.2s ease-in-out;
+  user-select: none;
+}
+.filter-radio {
+  /* display: none; */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+  overflow: hidden;
+}
+#filter-all:checked ~ .catagory-nav label[for="filter-all"],
+#filter-dog:checked ~ .catagory-nav label[for="filter-dog"],
+#filter-cat:checked ~ .catagory-nav label[for="filter-cat"],
+#filter-bird:checked ~ .catagory-nav label[for="filter-bird"],
+#filter-fish:checked ~ .catagory-nav label[for="filter-fish"],
+#filter-small-pets:checked ~ .catagory-nav label[for="filter-small-pets"] {
+  background-color: var(--secondary-color);
+  color: var(--light-text-color);
+}
+.catagory-nav label.active {
+  background-color: var(--secondary-color);
+  color: var(--light-text-color);
+}
+.catagory-nav label:hover {
+  background-color: var(--nav-link-hover-bg-color);
+  color: var(--nav-link-hover-text-color);
+  transform: translateY(-2px);
+}
+/* =============================
+            ซ่อนแสดงหัวข้อ
+   ============================= */
+.catagory-title {
+  display: none;
+}
+#filter-all:checked ~ main .title-all,
+#filter-dog:checked ~ main .title-dog,
+#filter-cat:checked ~ main .title-cat,
+#filter-bird:checked ~ main .title-bird,
+#filter-fish:checked ~ main .title-fish,
+#filter-small-pets:checked ~ main .title-small-pets {
+  display: inline;
+}
+/* =============================
+            ซ่อนแสดงภาพสัตตว์
+   ============================= */
+#filter-dog:checked ~ main .pet-card,
+#filter-cat:checked ~ main .pet-card,
+#filter-bird:checked ~ main .pet-card,
+#filter-fish:checked ~ main .pet-card,
+#filter-small-pet:checked ~ main .pet-card {
+  display: none;
+}
+#filter-dog:checked ~ main .pet-dog,
+#filter-cat:checked ~ main .pet-cat,
+#filter-bird:checked ~ main .pet-bird,
+#filter-fish:checked ~ main .pet-fish,
+#filter-small-pets:checked ~ main .pet-small {
+  display: block;
+}
+/* =============================
+            Main
+   ============================= */
+.page-titer {
+  text-align: center;
+  padding-block: 1.5rem;
+}
+.pet-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+.pet-card {
+  background-color: var(--nav-bg-color);
+  box-shadow: var(--card-shadow);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.pet-card img {
+  width: 100%;
+  height: 16.25rem;
+  object-fit: cover;
+  display: block;
+  overflow: hidden;
+  transition: transform 0.25s;
+}
+.pet-card:hover img {
+  transform: translate(-4px) scale(1.03);
+}
+.pet-content {
+  padding: 1.25rem;
+}
+.pet-content h2 {
+  columns: var(--primary-dark-color);
+}
+.breed {
+  color: var(--mute-text-color);
+}
+/* =============================
+        Info Section (คำแนะนำ)
+   ============================= */
+.info-section {
+  background-color: var(--nav-bg-color);
+  box-shadow: var(--card-shadow);
+  border-radius: 16px;
+  padding: 1.5rem 2rem 2rem;
+  margin: 2rem 1rem 3rem;
+}
+.info-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+.info-card {
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: var(--card-shadow);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.info-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+.info-card p {
+  color: var(--mute-text-color);
+  font-size: 0.9rem;
+}
+.info-blue {
+  background-color: var(--info-blue-bg);
+}
+.info-blue h3 {
+  color: var(--info-blue-title);
+}
+.info-purple {
+  background-color: var(--info-purple-bg);
+}
+.info-purple h3 {
+  color: var(--info-purple-title);
+}
+.info-green {
+  background-color: var(--info-green-bg);
+}
+.info-green h3 {
+  color: var(--info-green-title);
+}
+.info-orange {
+  background-color: var(--info-orange-bg);
+}
+.info-orange h3 {
+  color: var(--info-orange-title);
+}
+@media (max-width: 800px) {
+  .info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* =============================
+            Learning about Form
+   ============================= */
+
+.form-section {
+  background-color: var(--nav-bg-color);
+  box-shadow: var(--card-shadow);
+  border-radius: 16px;
+  padding: 1.5rem 2rem 2rem;
+  margin: 2rem 1rem 3rem;
+}
+.form-section h2 {
+  text-align: center;
+  color: var(--primary-color);
+}
+.form-section p {
+  text-align: center;
+  color: var(--mute-text-color);
+  margin-bottom: 0.5rem;
+}
+.form-section fieldset {
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+}
+.form-section legend {
+  color: var(--primary-color);
+  padding: 0 0.5rem;
+  font-weight: bold;
+}
+.radio-option {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.radio-item {
+}
+.radio-item input {
+  accent-color: var(--primary-dark-color);
+}
+.radio-item input:checked + label {
+  accent-color: var(--primary-dark-color);
+  color: var(--info-blue-title);
+}
+.radio-item label {
+  background-color: var(--info-orange-bg);
+  color: var(--primary-color);
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+/* =============================
+            Footer
+   ============================= */
+footer {
+  padding-block: 2rem;
+  background-color: var(--footer-bg-color);
+  color: var(--light-text-color);
+  margin-top: 15rem;
+  text-align: center;
+}
