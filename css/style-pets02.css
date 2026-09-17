@@ -148,7 +148,7 @@ body {
 #filter-cat:checked ~ main .pet-card,
 #filter-bird:checked ~ main .pet-card,
 #filter-fish:checked ~ main .pet-card,
-#filter-small-pet:checked ~ main .pet-card {
+#filter-small-pets:checked ~ main .pet-card {
   display: none;
 }
 #filter-dog:checked ~ main .pet-dog,
