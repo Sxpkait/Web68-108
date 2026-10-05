@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+:root {
+  --nav-bg-color: rgba(255, 255, 255, 0.548);
+  --primary-dark-color: rgb(234, 0, 255);
+  --card-shadow: blue;
+} /* ======================
+     Menu
+==========================*/
+.menu {
+  font-size: 30px;
+  padding: 20px;
+}
+.brand {
+  color: blue;
+  display: flex;
+  text-align: center;
+  gap: 1500px;
+  font-size: 30;
+  background-color: rgb(117, 116, 116);
+}
+.brand-text {
+  font-size: 20px;
+}
+.box {
+  background-color: blue;
+  text-align: center;
+  padding: 10px;
+  margin: 20px;
+}
+/* ======================
+Card
+==========================*/
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 2rem;
+  background-color: rgb(80, 80, 182);
+}
+.pet-card {
+  background-color: var(--nav-bg-color);
+  box-shadow: var(--card-shadow);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.html-content {
+  padding: 1.25rem;
+  text-align: center;
+  color: orange;
+}
+.css {
+  padding: 1.25rem;
+  text-align: center;
+  color: rgb(0, 183, 255);
+}
+.ui {
+  padding: 1.25rem;
+  text-align: center;
+  color: rgb(204, 0, 255);
+}
+.pet-content h2 {
+  columns: rgb(184, 184, 184);
+}
+.breed {
+  color: rgba(0, 0, 0, 0.404);
+}
+/* ======================
+Footer
+==========================*/
+footer {
+  background-color: black;
+  color: white;
+  margin-top: 15rem;
+  text-align: center;
+}
+.form {
+  background-color: rgb(247, 224, 224);
+  padding: 150px;
+}
+/*  */
+.pet-details .show-detail {
+  display: inline;
+}
+.pet-details .hide-detail {
+  display: none;
+}
+.pet-details[open] .show-detail {
+  display: none;
+}
