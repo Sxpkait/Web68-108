@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ติดต่อ | Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ส่วนหัวและเมนู: คัดลอกไปวางทุกหน้า (เปลี่ยน class="active" ให้ตรงหน้านั้น) -->
+  <header class="site-header">
+    <p class="logo">My Portfolio</p>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">หน้าแรก</a></li>
+        <li><a href="about.html">ประวัติและทักษะ</a></li>
+        <li><a href="projects.html">ผลงาน</a></li>
+        <li><a href="contact.html" class="active">ติดต่อ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>ติดต่อฉัน</h1>
+
+    <section class="section">
+      <h2>ช่องทางติดต่อ</h2>
+      <ul>
+        <li>Email: <a href="mailto:684259035@webmail.npru.ac.th">684259035@webmail.npru.ac.th</a></li>
+        <li>GitHub: <a href="https://github.com/Sxpkait">github.com/Sxpkait</a></li>
+        <li>Facebook / LinkedIn: <a href="https://www.facebook.com/supakit.ken.2025">supakit Ken</a></li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>ส่งข้อความถึงฉัน</h2>
+      <!-- ฟอร์ม -->
+      <form class="form-box" action="#" method="post">
+        <label for="name">ชื่อ</label>
+        <input type="text" id="name" name="name" placeholder="ชื่อของคุณ" required>
+
+        <label for="email">อีเมล</label>
+        <input type="email" id="email" name="email" placeholder="name@email.com" required>
+
+        <label for="message">ข้อความ</label>
+        <textarea id="message" name="message" rows="5" placeholder="พิมพ์ข้อความที่นี่" required></textarea>
+
+        <button class="button" type="submit">ส่งข้อความ</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 นาย ศุภกิตติ์ สุทธิรัตนากร | Portfolio Website</p>
+  </footer>
+
+</body>
+</html>
